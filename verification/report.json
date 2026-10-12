@@ -1,0 +1,204 @@
+{
+  "stage": "DEVELOPMENT_PILOT_NOT_PRODUCTION_CLEARED",
+  "tests": {
+    "pass": 24,
+    "fail": 0,
+    "skip": 0,
+    "codecCasesInsideOneTest": 18,
+    "cases": [
+      {
+        "name": "nonce-protected WordPress repository creation",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "real Git clone of unborn repository",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "real Git initial push and object/refs transaction",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "real Git clone byte equality and native git fsck --strict",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "real Git multiple commits, merge parents, delta-heavy push and incremental fetch",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "annotated/lightweight tags, atomic multi-ref updates and tag deletion",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "browser tree/log/blob escapes repository HTML and never executes PHP",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "private transport rejects anonymous, invalid token and WordPress-cookie-only Git",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "another WordPress user cannot read private UI/API or Git objects",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "owner membership read scope, write denial, immediate membership revocation",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "read-only OAuth grant cannot request receive-pack despite owner ACL",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "issues, comments and status persist without stored script execution",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "duplicate/unsafe paths and malformed requests fail closed",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "stale ref and missing-object ref update cannot mutate existing state",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "checksum-invalid pack never publishes refs/events",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "non-fast-forward native Git force push denied",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "unadvertised object wants denied and no private static files",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "webhook URL validation rejects private/non-HTTPS/credentials/redirect fragments",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "successful refs enqueue stable HMAC event; failed push never enqueues",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "actual local webhook POST, retry, stable ID/body, HMAC and delivery log",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "atomic competing same-old ref updates yield one success, one conflict",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "atomic multi-ref failure leaves every ref and outbox unchanged",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "OAuth token revocation immediately blocks actual Git ls-remote",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "bounded codec valid fixtures and 16 adversarial rejection checks",
+        "status": "expected",
+        "results": [
+          "passed"
+        ]
+      }
+    ],
+    "durationMs": 108358.312
+  },
+  "runtime": {
+    "php": "8.3.33",
+    "wordpress": "6.9.10",
+    "phpWorkers": 1
+  },
+  "nativeGit": "git version 2.55.0",
+  "oauthCommit": "01e4e5856bc06a84daafc4ce8d7e8c79fc2c7c5c",
+  "gates": {
+    "multiWorker": "BLOCKED_SESSION_INTERRUPTION_SINGLE_WORKER_IS_NOT_PROOF",
+    "nativeMySQLWasmer": "NOT_RUN",
+    "restartBackupRestore": "NOT_RUN",
+    "productionPinnedTLSWebhooks": "NOT_RUN_LOCAL_HTTP_ONLY_PASS",
+    "officialWordPressPluginCheck": "CI_CONFIGURED_NOT_RUN",
+    "independentSecurityReviewFuzzingSHA1CollisionHardening": "NOT_RUN"
+  },
+  "pluginFiles": {
+    "robw-forge/LICENSE": "0dcaa9eee3e36fafaaba99d20e92bbafa5b5500643761c1b84adb9369dc194b6",
+    "robw-forge/readme.txt": "416d44e38f470a46d0e29f7ffdb177ea5d255c0d4778d14955a1ab766ef8a57a",
+    "robw-forge/robw-forge.php": "4429579a0a32a543a9498f51f9555adf48f89ca1fb71caf80240af668a6eacc8",
+    "robw-forge/src/git.php": "db5fdc73b1c494c426d36e0101522d2a5bb3564a1193efc5bf8af8364e298925",
+    "robw-forge/src/hooks.php": "0669e726b762c9b94412a57fd9e98eaffc9930e4d30c38ee29c266c92713d05f",
+    "robw-forge/src/http.php": "a276a997861e5fed98e169b457ceaf1a450a9ecc6cc3868b58b7f22e4e8e8361",
+    "robw-forge/src/store.php": "52caa4ee93983dd423ff3d817033adc7d0cd34c020c1e08f5631bb38e3ed376f"
+  }
+}

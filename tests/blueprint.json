@@ -1,0 +1,20 @@
+{
+  "steps": [
+    {
+      "step": "activatePlugin",
+      "pluginPath": "robw-oauth/robw-oauth.php"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "robw-forge/robw-forge.php"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; update_option('permalink_structure','/%postname%/'); wp_insert_user(['user_login'=>'alice','user_pass'=>bin2hex(random_bytes(32)),'role'=>'author']);wp_insert_user(['user_login'=>'bob','user_pass'=>bin2hex(random_bytes(32)),'role'=>'subscriber']);RobwOAuthDB::mutate(function(&$s){$s['clients']['forge-test']=['name'=>'Forge Test','redirect_uri'=>'http://127.0.0.1/oauth/callback','scope'=>'repo:read repo:write'];});"
+    }
+  ],
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "6.9"
+  }
+}

@@ -1,0 +1,1 @@
+const {defineConfig}=require('@playwright/test');module.exports=defineConfig({testDir:'./tests',timeout:120000,workers:1,retries:0,reporter:[['list'],['json',{outputFile:'test-results/results.json'}]],use:{baseURL:'http://127.0.0.1:9500',trace:'off',screenshot:'off',video:'off',launchOptions:{executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox']}}});
